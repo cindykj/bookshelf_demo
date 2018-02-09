@@ -11,14 +11,14 @@ module.exports = {
       password : 'password',
       database : 'bookshelf_demo_dev',
       charset: 'utf8',
-      debug: true, // can turn off, will show query details
     },
     migrations: {
-      directory: path.join(__dirname, '/knex/migrations'),
+      directory: path.join(__dirname, '/db/migrations'),
     },
     seeds: {
-      directory: path.join(__dirname, '/knex/seeds')
-    }
+      directory: path.join(__dirname, '/db/seeds')
+    },
+    debug: false, // can turn off, will show query details
   },
 
   staging: {
