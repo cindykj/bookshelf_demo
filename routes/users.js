@@ -34,9 +34,9 @@ router.route('/')
 
 router.route('/:id')
   .get((req, res) => {
-    return new User() //jess things this is clearner
+    return new User() //jesse things this is cleaner than below comments
       .where({ id: req.params.id })
-      .fetch()
+      .fetch({ withRelated: ['posts'] })
       .then(user => {
         if (!user) {
           throw new Error('User not found!');
